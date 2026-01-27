@@ -970,9 +970,8 @@ footer {
         margin: 0 auto 10vh auto;
         /* Center with spacing */
         width: 100%;
-        /* Match the container/content width exactly */
+        /* Broaden to match text width as requested */
         height: 40vh;
-        /* Further reduced height */
         box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.6);
         background: var(--bg-card);
         border-radius: 20px;
