@@ -58,7 +58,7 @@ body {
     display: inline-block;
     padding: 12px 32px;
     background: linear-gradient(135deg, var(--primary), var(--secondary));
-    color: white;
+    color: white !important;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
@@ -1031,8 +1031,7 @@ footer {
     }
 
     .about-content {
-        order: 1;
-        /* Image first? No, keep text first usually, or swap if desired */
+        /* order: 1; Removed so text stays above image */
     }
 
     .stats-row {
