@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, {
-        threshold: 0.1
+        threshold: 0 // Changed from 0.1 to 0 to ensure large sections (like Gallery) trigger reveal even if > 100vh
     });
 
     sections.forEach(section => {
