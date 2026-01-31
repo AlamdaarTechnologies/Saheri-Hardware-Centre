@@ -940,218 +940,178 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
 
-    /* Mobile Native Sticky Stack */
-    .gallery-wrapper {
-        height: auto !important;
-        padding-bottom: 20vh;
+    /* Global Container Adjustments */
+    .container {
+        padding: 0 20px;
     }
 
-    .gallery-sticky {
-        position: relative !important;
-        height: auto !important;
-        top: auto !important;
-        display: block !important;
-        overflow: visible !important;
-    }
-
-    .gallery-track {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: auto;
-        padding: 0;
-        gap: 20px;
-        align-items: center;
-        /* Force cards to center */
-    }
-
-    .gallery-item {
-        position: sticky;
-        margin: 0 auto 10vh auto;
-        /* Center with spacing */
-        width: 100%;
-        /* Broaden to match text width as requested */
-        height: 40vh;
-        box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.6);
-        background: var(--bg-card);
-        border-radius: 20px;
-
-        /* Reset transform/opacity */
-        transform: none !important;
-        opacity: 1 !important;
-    }
-
-    .gallery-item .gallery-img {
-        border-radius: 20px;
-    }
-
-    /* Progressive offsets - Stack safely below Header (80px) */
-    /* Start at 100px so it clears the header */
-    .gallery-item:nth-child(1) {
-        top: 100px;
-        z-index: 1;
-        margin-bottom: 10vh;
-    }
-
-    .gallery-item:nth-child(2) {
-        top: 110px;
-        z-index: 2;
-        margin-bottom: 10vh;
-    }
-
-    .gallery-item:nth-child(3) {
-        top: 120px;
-        z-index: 3;
-        margin-bottom: 10vh;
-    }
-
-    .gallery-item:nth-child(4) {
-        top: 130px;
-        z-index: 4;
-        margin-bottom: 10vh;
-    }
-
-    .gallery-item:nth-child(5) {
-        top: 140px;
-        z-index: 5;
-        margin-bottom: 10vh;
-    }
-
-    .gallery-item:nth-child(6) {
-        top: 150px;
-        z-index: 6;
-        margin-bottom: 20vh;
-    }
-
-
+    /* Navbar Mobile */
     .nav-links {
         display: none;
-        /* Add JS toggle later */
         position: absolute;
         top: var(--header-height);
         left: 0;
         width: 100%;
         background: var(--bg-dark);
         flex-direction: column;
-        padding: 30px;
+        padding: 40px 20px;
         border-bottom: 1px solid var(--border);
+        gap: 20px;
+        height: calc(100vh - var(--header-height));
+        /* Full screen menu */
+        align-items: center;
+        justify-content: center;
     }
 
     .nav-links.active {
         display: flex;
     }
 
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        font-size: 1.5rem;
+        /* Larger touch targets */
+        display: block;
+        padding: 10px;
+    }
+
     .mobile-toggle {
         display: flex;
     }
 
-    /* Fix Hero Vertical Alignment on Mobile - Robust Flex Update */
+    /* Hero Section Mobile */
     .hero {
-        align-items: flex-start !important;
-        padding-top: 150px !important;
-        height: auto !important;
-        min-height: auto !important;
-        padding-bottom: 50px;
-        overflow: visible !important;
+        padding-top: calc(var(--header-height) + 2rem);
+        padding-bottom: 4rem;
+        height: auto;
+        min-height: auto;
+        display: block;
+        /* Remove flex centering */
     }
 
     .hero-content {
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: flex-start;
+        grid-template-columns: 1fr;
+        gap: 40px;
         text-align: center;
-        width: 100%;
-        gap: 30px;
     }
 
     .hero-text {
-        margin-top: 10px;
+        margin: 0 auto;
     }
 
     .hero-text h1 {
         font-size: 2.5rem;
-        /* Reduce font size to prevent overflow on small screens */
+        line-height: 1.2;
     }
 
     .hero-btns {
-        justify-content: center;
         display: flex;
-        flex-wrap: wrap;
-        /* Allow buttons to stack on very small screens */
-        gap: 10px;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        width: 100%;
     }
 
-    .about-container,
-    .contact-grid {
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        max-width: 300px;
+        margin: 0;
+        text-align: center;
+    }
+
+    /* About Section Mobile */
+    .about-container {
         grid-template-columns: 1fr;
-        text-align: center;
+        gap: 40px;
     }
 
-    /* Center Stats */
-    .about-stats {
+    .about-content {
+        order: 1;
+        /* Image first? No, keep text first usually, or swap if desired */
+    }
+
+    .stats-row {
         justify-content: center;
+        flex-wrap: wrap;
     }
 
-    .stat-item {
-        text-align: center;
+    /* Gallery Mobile - SIMPLIFIED STACK */
+    .gallery-wrapper {
+        height: auto;
+        /* Remove scroll distance hack */
     }
 
-    /* Center Brands */
-    .brands-grid {
-        justify-content: center;
+    .gallery-sticky {
+        position: static;
+        height: auto;
+        display: block;
+        overflow: visible;
     }
 
-    /* Center Category Cards */
-    .category-card {
-        text-align: center;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    /* Truly Center Contact Items (Icon on Top) */
-    .contact-list li {
-        display: flex;
-        /* Ensure flex behavior */
-        flex-direction: column;
-        /* Stack icon above text */
-        align-items: center;
-        text-align: center;
-        margin-bottom: 25px;
-    }
-
-    .contact-list li .icon {
-        margin-right: 0;
-        margin-bottom: 10px;
-        font-size: 2rem;
-    }
-
-    .gallery-grid {
-        display: none;
-        /* Hide default grid in favor of stack/scroll */
-    }
-}
-
-/* Extra Small Devices (iPhone SE, Fold) */
-@media (max-width: 380px) {
-    .container {
-        padding: 0 15px;
-        /* Reduce padding to give more room */
-    }
-
-    .hero-text h1 {
-        font-size: 2.2rem;
-        /* Further Play it safe for fold devices */
+    .gallery-track {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0;
+        transform: none !important;
+        /* Disable JS parallax/scroll transform */
     }
 
     .gallery-item {
-        width: 95%;
-        /* Use full width minus margins */
+        min-width: 0;
+        /* Reset desktop width */
+        width: 100%;
+        height: 300px;
+        /* Fixed height for cards */
+        margin: 0;
+        opacity: 1 !important;
+        transform: none !important;
+        /* Remove sticky stacking */
+        position: relative;
+        top: auto;
+    }
+
+    .gallery-item:nth-child(n) {
+        top: auto;
+        margin-bottom: 0;
+    }
+
+    /* Hover effects on mobile usually annoying, keep overlay visible or subtle */
+    .gallery-overlay {
+        transform: translateY(0);
+        /* Always show title on mobile */
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    }
+
+    /* Contact & Footer */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .map-container {
+        min-height: 300px;
+    }
+
+    /* Disable Custom Cursor */
+    .cursor,
+    .cursor-follower {
+        display: none !important;
     }
 }
 
-/* Fix Nav Button Color */
-.nav-links .btn-primary {
-    color: white !important;
+/* Small Mobile Adjustments */
+@media (max-width: 400px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
 }
