@@ -1143,3 +1143,59 @@ footer {
         font-size: 2rem;
     }
 }
+
+/* Founders Section */
+.founders-wrapper {
+    margin-top: 60px;
+    padding-top: 40px;
+}
+
+.founders-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    /* Wider gap for desktop */
+}
+
+.founder-item {
+    text-align: center;
+}
+
+.founder-img {
+    width: 200px;
+    /* Big circles as requested */
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary);
+    margin-bottom: 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.founder-item:hover .founder-img {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px var(--primary-glow);
+}
+
+.founder-item h4 {
+    font-family: var(--font-heading);
+    color: var(--text-main);
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+}
+
+.founder-item p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+/* Founders Responsive */
+@media (max-width: 768px) {
+    .founders-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+}
