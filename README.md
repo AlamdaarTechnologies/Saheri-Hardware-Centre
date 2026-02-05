@@ -63,6 +63,6 @@ You only need a modern web browser to view this project. No build tools or packa
 
 
 ---
-Developed with ❤️ by [Captain0769](https://github.com/Captain0769)
+Developed with ❤️ by [Alamdaar Technologies](https://github.com/AlamdaarTechnologies)
 
 &copy; 2026 Saheri Hardware Centre. All rights reserved.
