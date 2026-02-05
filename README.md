@@ -2,7 +2,7 @@
 
 > **"Build Better, Stronger, Smarter."**
 
-Welcome to the official website repository for **Saheri Hardware Centre**, a premier hardware solutions provider based in Vadodara, Gujarat. Established in 1990, we serve builders, contractors, and DIY enthusiasts with top-tier tools and materials.
+Welcome to the official website repository for **Saheri Hardware Centre**, a premier hardware solutions provider based in Vadodara, Gujarat. Established in 1990, we serve builders, contractors, and enthusiasts with top-tier tools and materials.
 
 ## 🚀 Live Demo
 Visit the live site: [https://saherihardwarecentre.vercel.app](https://saherihardwarecentre.vercel.app)
@@ -50,7 +50,7 @@ You only need a modern web browser to view this project. No build tools or packa
 2.  **Open the project**:
     Navigate to the project folder and open `index.html` in your browser.
 
-## 👥 Authors
+## 👥 Founders
 
 -   **Mr. Moizbhai Safakathussain Saherwala** - *Founder | Proprietor*
 -   **Mr. Aliakbar Moizbhai Saherwala** - *Co-Founder | CEO*
@@ -61,5 +61,8 @@ You only need a modern web browser to view this project. No build tools or packa
 -   📞 Phone: [+91 98243 42779](tel:+919824342779)
 -   🕒 Hours: Mon-Sat (10:00 AM - 8:00 PM), Sun (11:00 AM - 2:00 PM)
 
+
 ---
+Developed with ❤️ by [Captain0769](https://github.com/Captain0769)
+
 &copy; 2026 Saheri Hardware Centre. All rights reserved.
