@@ -36,7 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            navLinks.classList.remove('active'); // Close mobile menu on click
+            if (navLinks) {
+                navLinks.classList.remove('active'); // Close mobile menu on click
+            }
 
             // Reset hamburger if needed
             const bars = document.querySelectorAll('.mobile-toggle .bar');

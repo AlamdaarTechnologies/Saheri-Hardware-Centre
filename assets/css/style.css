@@ -378,7 +378,7 @@ body {
 /* Horizontal Scroll Gallery */
 .gallery-wrapper {
     height: 600vh;
-    /* Scroll distance increased for 15 items */
+    /* Scroll distance increased for 10 items */
     position: relative;
     visibility: visible;
 }
